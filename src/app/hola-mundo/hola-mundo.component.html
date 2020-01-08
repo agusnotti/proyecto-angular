@@ -1,0 +1,30 @@
+<div class= "hola-mundo">
+    <h1>{{ titulo }}</h1>
+    <h3>hola-mundo works!</h3>
+</div>
+
+<ul>    
+    <li *ngFor= "let user of users"><!-- directiva. recorro el arreglo de users. por cada posicion me guarda un usuario en la variable user-->
+        {{ user }} <!--llamo a la variable user-->
+    </li> 
+</ul>
+
+<ul>    
+    <li *ngFor= "let user of users"><!-- directiva. Condicional-->
+        <app-user [nombreUsuario] = "user"></app-user> <!-- llamo a otro componente -->
+    </li> 
+</ul>
+
+<ul>    
+    <li *ngIf= "!activated"><!-- directiva. Condicional-->
+        activada 
+    </li> 
+</ul>
+
+<!-- <ul>
+    <li>{{ users[0] }}</li>
+    <li>{{ users[1] }}</li>
+    <li>{{ users[2] }}</li>
+</ul> -->
+
+
