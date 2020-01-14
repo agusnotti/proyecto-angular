@@ -1,0 +1,12 @@
+<div>
+    <p>nombre: {{ nombre }}</p>
+    <p>edad: {{ edad }}</p>
+    <p>direccion: {{ direccion.calle }}</p>
+    <p>direccion: {{ direccion.numero }}</p>
+    <ul>
+        <li *ngFor='let hobbie of hobbies'>
+            {{ hobbie }}
+        </li>
+    </ul>
+
+  </div>

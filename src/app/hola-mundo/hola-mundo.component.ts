@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HolaMundoComponent implements OnInit {
   titulo = 'Bienvenida otra vez!!';
-  users = ['agus', 'gabi', 'tati'];
+  users: string [] = ['agus', 'gabi', 'tati'];
   activated= true;
 
   constructor() { }

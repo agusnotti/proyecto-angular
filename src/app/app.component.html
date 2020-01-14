@@ -351,8 +351,40 @@
 
   
   <saludo></saludo>
-  <app-prueba></app-prueba>
+  
+  <!-- <app-datos></app-datos> -->
+  
   <app-hola-mundo></app-hola-mundo>
+
+
+  <form (submit)="agregarUsuario(nuevoUsuario)"> <!--evento-->
+    <input type="text" #nuevoUsuario> <!--reconoce el input (como el id en js)-->
+    <button > agregar usuario </button>
+  </form>
+  
+  <ul>
+    <li *ngFor= 'let usuario of usuarios'> {{ usuario }} <button (click)= 'borrarUsuario(usuario)'> borrar  </button></li>
+  </ul>
+
+  <button (click)= 'decirHola()'> click  </button> <!--evento-->
+
+  <div> <!--doble enlace de datos-->
+    <form>
+      <input type="text" name= "nombre" [(ngModel)] = "nombre">
+      <input type="text" name="edad" [(ngModel)] = "edad">
+    </form>
+
+    nombre: {{ nombre}} <br>
+    edad: {{ edad }}
+  </div>
+
+
+
+
+
+
+
+
 
   <!-- Resources -->
   <!-- <h2>Resources</h2>
